@@ -1,0 +1,26 @@
+---
+common-css:
+  - "{{"/resources/css/bootstrap.min.css" | prepend: site.baseurl }}"
+  - "{{"/resources/css/main-minimal.css" | prepend: site.baseurl }}"
+common-js:
+  - "{{"/resources/js/jquery-1.11.2.min.js" | prepend: site.baseurl }}"
+  - "{{"/resources/js/bootstrap.min.js" | prepend: site.baseurl }}"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body style="background-color: var(--background-color); color: var(--font-color)">
+
+    <div role="main" class="container main-content">
+      {{ content }}
+    </div>
+
+    {% include footer-minimal.html %}
+
+    {% include footer-scripts.html %}
+
+  </body>
+</html>
